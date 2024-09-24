@@ -16,11 +16,11 @@
     <div class="container">
       <h1>Sign Up Today!</h1>
       <!-- Form -->
-      <form id="form">
+      <form id="form" novalidate>
         <!-- Full Name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Full Name" required
+          <input type="text" id="name" placeholder="Full Name" name="name" required
           minlength="3" maxlength="100" / >
         </div>
         <!-- Phone Number -->
@@ -30,6 +30,7 @@
             type="tel"
             id="phone"
             placeholder="555-555-5555"
+            name="phone"
             required
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           />
@@ -41,6 +42,7 @@
             type="email"
             id="emal"
             placeholder="email@address.com"
+            name="email"
             required
           />
         </div>
@@ -51,6 +53,7 @@
             type="url"
             id="website"
             placeholder="http://jacinto.design"
+            name="website"
             required
           />
         </div>
@@ -73,6 +76,7 @@
             type="password"
             id="password2"
             placeholder="Confirm Password"
+            name="password"
             required
             pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           />
